@@ -1,7 +1,6 @@
 name: Cloudflare Gateway Adblock Updater
 
 on:
-  repository: SeriousHoax/Cloudflare-Gateway-Adblock-Updater
   schedule:
     - cron: '0 */3 * * *'  # Runs every 3 hours
   workflow_dispatch:     # Allows manual runs
@@ -14,9 +13,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v7
-        with:
-          ref: personal
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v7
